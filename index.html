@@ -1,49 +1,254 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chaos Emerald</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Chaos Emerald</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 
 
 </head>
+<body class="container" background="http://images.psxextreme.com/wallpapers/ps3/sonic_1426.jpg">
+
+
+
 <body>
+<!-- container start -->
+<div class="container">
+<div class="row">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="page-header">
-            <h1 align="center">Chaos Emerald Collector!</h1>
-          </div>
-          
-          <div class="row">
-            <div class="col-md-3">
-              <img src="http://placehold.it/150x150" alt="Placeholder" class="img-thumbnail">
-            </div>
-            <div class="col-md-3">
-              <img src="http://placehold.it/150x150" alt="Placeholder" class="img-thumbnail">
-            </div>
-            <div class="col-md-3">
-              <img src="http://placehold.it/150x150" alt="Placeholder" class="img-thumbnail">
-            </div>
-            <div class="col-md-3">
-              <img src="http://placehold.it/150x150" alt="Placeholder" class="img-thumbnail">
-            </div>
-     
-     
+<audio autoplay controls src="assets/song/cityEscape.mp3" type="audio/mp3">
+</audio>
+</div>
 
 
-
-
-
-
-
-
-
-
-
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-header">
+      <h1 align="center">Chaos Emerald Collector!</h1>
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">How to Play</h3>
+      </div>
+        <div class="panel-body">
+        You will be given a random number at the start of the game.
+        <br>
+        <br>
+        There are four Chaos Emeralds below. By clicking on an emerald, you will add a specific amount of points to your total score.
+        <br>
+        <br>
+        You win the game by matching your total score to the random number, you lose the game if you go above the number.
+        <br>
+        <br>
+        The value of each emerald is hidden from you until you click on it.
+        <br>
+        <br>
+        Each time when the game starts, the game will change the values of each emerald.
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Random Number</h3>
+        </div>
+        <div class="panel-body">
+                 <div id="randomNumber" class="randomNumber"></div>
+      </div>
+    </div>
+  </div>
+    <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Total Score</h3>
+        </div>
+        <div class="panel-body" id="totalScore">
+                 <div id="totalScore" class="totalScore"></div>
+      </div>
+    </div>
+  </div>
+    <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wins</h3>
+        </div>
+        <div class="panel-body" id="wins">
+                <div id="wins" class="wins"></div>
+      </div>
+    </div>
+  </div>
+    <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Losses</h3>
+        </div>
+        <div class="panel-body" id="losses">
+                 <div id="losses" class="losses"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+              
+<div class="row">
+    <div class="col-sm-3">
+    <img src="assets/images/redGem.jpg" alt="Placeholder" class="img-thumbnail redGem" id="redGem">
+      </div>
+      <div class="col-sm-3">
+      <img src="assets/images/blueGem.jpg" alt="Placeholder" class="img-thumbnail blueGem" id="blueGem">
+      </div>
+      <div class="col-sm-3">
+      <img src="assets/images/yellowGem.jpg" alt="Placeholder" class="img-thumbnail yellowGem" id="yellowGem">
+      </div>
+      <div class="col-sm-3">
+      <img src="assets/images/purpleGem.jpg" alt="Placeholder" class="img-thumbnail purpleGem" id="purpleGem">
+      </div>
+
+
+
+
+</div>
+
+</div>  <!-- container end -->
+
+
+
+<script type="text/javascript">
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var randomNumber = Math.floor((Math.random() * 120) +19);
+var totalScore = 0;
+var wins = 0;
+var losses = 0;
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var gem1 = Math.ceil(Math.random() *12);
+var gem2 = Math.ceil(Math.random() *12);
+var gem3 = Math.ceil(Math.random() *12);
+var gem4 = Math.ceil(Math.random() *12);
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  $("#randomNumber").html(randomNumber);
+  $("#totalScore").html(totalScore);
+  $("#wins").html(wins);
+  $("#losses").html(losses);
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+  function restart() {
+
+  randomNumber = Math.floor((Math.random() * 120) +19)
+  totalScore = 0;
+  var gem1 = Math.ceil(Math.random() *12);
+  var gem2 = Math.ceil(Math.random() *12);
+  var gem3 = Math.ceil(Math.random() *12);
+  var gem4 = Math.ceil(Math.random() *12);
+
+  $("#randomNumber").html(randomNumber);
+  $("#totalScore").html(totalScore);
+
+    }
+
+
+function winlose(){ 
+  if (totalScore == randomNumber){
+          wins++;
+          $("#wins").html(wins);
+          alert("You Won!")
+                  restart();
+        }
+  else if (totalScore > randomNumber){
+          losses++;
+          $("#losses").html(losses);
+          alert("You Lost!")
+                  restart();
+        }
+
+    }
+
+
+
+
+
+  $(".redGem").click(function(){
+        totalScore = totalScore + gem1;
+        $("#randomNumber").html(randomNumber);
+        $("#totalScore").html(totalScore);
+        winlose();
+        console.log(totalScore);
+
+  });
+  $(".blueGem").click(function(){
+        totalScore = totalScore + gem2;
+        $("#randomNumber").html(randomNumber);
+        $("#totalScore").html(totalScore);
+        winlose();
+        console.log(totalScore);
+  });
+
+  $(".yellowGem").click(function(){
+        totalScore = totalScore + gem3;
+        $("#randomNumber").html(randomNumber);
+        $("#totalScore").html(totalScore);
+        winlose();
+        console.log(totalScore);
+  });
+
+  $(".purpleGem").click(function(){
+        totalScore = totalScore + gem4;
+        $("#randomNumber").html(randomNumber);
+        $("#totalScore").html(totalScore);
+        winlose();
+        console.log(totalScore);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 
